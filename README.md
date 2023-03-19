@@ -1,11 +1,31 @@
-# 👋 Hey there! 
+# SQL Server LAG Function 
 
-I've created new repo called SQL where I'll be sharing all the awesome things I've been working on and writing about using SQL. For me, SQL is the ultimate tool for analyzing and understanding my data.
+Hello everyone! Today, we'll be exploring the LAG function of SQL Server's analytic functions to calculate the difference in stock quantities for multiple product groups based on their previous day's stock levels.
 
-In this repository, I'll cover everything from the basics of SQL to advanced topics like joins, subqueries, and data analysis. Whether you're just starting out or you're already familiar with SQL, I'll have something for you to learn.
+In other words, the LAG function will come to our rescue!
 
-SQL is a powerful programming language used for organizing, storing, and querying data. Thanks to this language, I'm able to gain a deeper understanding of my data. Additionally, SQL's compatibility with many different types of database management systems makes it even more widely used.
+First, let's define the LAG function. It's used to retrieve the value of a previous row, one or more rows before the current row, from a dataset. When using the LAG function, it's common for the first row to return NULL values.
 
-My aim with this repo is to provide an amazing resource for all things SQL. And just to spice things up a bit, I've added a few emojis here and there. I hope you enjoy them!
+Note: The LAG function is the opposite of the LEAD function, which retrieves the value of a row that follows the current row.
 
-So come on, let's dive into the magical world of SQL together! 😊💻📊
+Let's start by getting familiar with our table.
+
+![image](https://user-images.githubusercontent.com/127193220/226164761-4cb363b8-4e84-4708-9c0e-9362933d4bfc.png)
+
+Our first step will be to use the LAG function to display the previous day's stock quantities in a new column. Since we'll be sorting by date in this column, we shouldn't forget to include the date column in our ORDER BY command.
+
+Secondly, to calculate the differences in our current stock quantities based on the previous order quantities, we'll subtract the previously obtained order quantity column from our current quantity column.
+
+SQL Query:
+
+SELECT Stok_Kodu, Tarih, Miktar,
+
+LAG(Miktar,1,0) OVER(PARTITION BY Stok_Kodu ORDER BY Tarih) AS Önceki_Miktar,
+
+Miktar — LAG(Miktar,1,0) OVER(PARTITION BY Stok_Kodu ORDER BY Tarih) AS Fark
+
+FROM [dbo].[Stok]
+
+When we run our query, we can see that our stock codes are grouped sequentially according to dates, and at the same time, we can reach the previous stock amount information and the stock amount differences of our product on the previous date in the difference column.
+
+![image](https://user-images.githubusercontent.com/127193220/226164911-b81c7732-de0b-4c0b-9745-4ed0046ec970.png)
