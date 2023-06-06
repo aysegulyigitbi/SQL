@@ -10,6 +10,8 @@ In the first step, a SQL script is prepared to create a new database. This scrip
 
 **Türkçe Kaynak**: https://medium.com/@ayigit/azure-sql-veritaban%C4%B1-olu%C5%9Fturma-4d84495f837
 
+![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/d2236708-84d1-479b-92d3-3757eb9c6299)
+
 **Azure Storage Explorer**
 
 Through Azure Storage Explorer, the container on Azure Explorer is accessed and the container's URL information is obtained.
