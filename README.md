@@ -4,11 +4,11 @@ Azure SQL Database is a popular option for storing and managing data. This artic
 
 ![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/c591271a-1a85-477a-9a7f-edf50fc16848)
 
-In the first step, a SQL script is prepared to create a new database. This script specifies the name of the database. However, instead of physically creating the mdf and ldf files in the C folder, it is intended to create a file on Azure. A new script needs to be created by specifying the name of the database.
+**Türkçe Kaynak**: https://medium.com/@ayigit/azure-sql-veritaban%C4%B1-olu%C5%9Fturma-4d84495f837
 
 ![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/ab6fd591-9774-4dfa-8297-3249396bf375)
 
-**Türkçe Kaynak**: https://medium.com/@ayigit/azure-sql-veritaban%C4%B1-olu%C5%9Fturma-4d84495f837
+In the first step, a SQL script is prepared to create a new database. This script specifies the name of the database. However, instead of physically creating the mdf and ldf files in the C folder, it is intended to create a file on Azure. A new script needs to be created by specifying the name of the database.
 
 ![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/d2236708-84d1-479b-92d3-3757eb9c6299)
 
