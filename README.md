@@ -73,6 +73,7 @@ We can read the content in the format separated by columns through the format fi
 **We can create a web and read the external csv continuously.**
 
 --single line, single column
+
 SELECT *
 FROM OPENROWSET (
 BULK 'C:\Data\Sales.csv',
@@ -81,6 +82,7 @@ SINGLE_CLOB
 
 
 --In a columnar format
+
 SELECT *
 FROM OPENROWSET (
 BULK 'C:\Data\Sales.csv',
