@@ -13,6 +13,7 @@ https://docs.microsoft.com/en-us/sql/tools/bcp-utility?view=sql-server-ver16
 ![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/f854d294-2dce-41bc-86c1-198442b1cdc7)
 
 Where is it located? (cmd>Where bcp)
+
 C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\bcp.exe
 
 ![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/bec63c8e-a7ee-4955-bbb3-98e9455cbcc9)
@@ -28,6 +29,7 @@ This data is not intended to be exported to the Exports table. Therefore, it is 
 ![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/d52e5cf6-fc63-4018-a5f1-1d34780a9ae5)
 
 BCP Copy Utility can be run with parameters "-c" and "-n". The "-c" parameter is used to get a readable output, while the "-n" parameter is used to get native output.
+
 **bcp SourceDB.dbo.Sales out C:\Data\Sales.csv -c -t, -S localhost -T**
 
 ![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/9b0f0e97-4f53-417f-bfbd-ca4bc3fccc20)
@@ -46,6 +48,7 @@ In the first operation, we kept the data in single row and single column and it 
 
 If we want to see it as a normal table, we need to create a format file.
 For this process, we need to run the following command in cmd.
+
 **bcp SourceDB.dbo.Sales format nul -f C:\Data\Sales.fmt -c -t, -S localhost -T**
 
 ![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/82623048-a95f-444d-8663-1c0e4604626c)
@@ -68,12 +71,14 @@ We can read the content in the format separated by columns through the format fi
 ![image](https://github.com/aysegulyigitbi/SQL/assets/127193220/7b7e5d21-f12c-4ba1-b817-25136992d1d1)
 
 **We can create a web and read the external csv continuously.**
+
 --single line, single column
 SELECT *
 FROM OPENROWSET (
 BULK 'C:\Data\Sales.csv',
 SINGLE_CLOB
         ) AS t1;
+
 
 --In a columnar format
 SELECT *
