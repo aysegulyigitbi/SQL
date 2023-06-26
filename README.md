@@ -6,7 +6,7 @@ BCP Copy Utility is a utility for batch copying data between a Microsoft SQL Ser
 
 **Türkçe Kaynak:** https://medium.com/@ayigit/tablo-verilerini-toplu-olarak-kopyalaman%C4%B1n-kolay-yolu-bcp-copy-utility-52245114183e
 
-BCP Copy Utility, bir tabloya veri aktarmak için o tablo için oluşturulmuş bir format dosyası kullanmanızı veya tablonun yapısını ve sütunları için geçerli olan veri türlerini anlamanızı gerektirir. Bu nedenle, öncelikle verileri aktarmak istediğiniz tabloyu ve tablodaki sütunları anlamalısınız.Aşağıdaki linkten indirebilirsiniz.
+To import data into a table, BCP Copy Utility requires you to use a format file created for that table or understand the table's structure and data types that apply to its columns. Therefore, you must first understand the table you want to transfer the data to and the columns in the table. You can download it from the link below.
 
 https://docs.microsoft.com/en-us/sql/tools/bcp-utility?view=sql-server-ver16  
 
